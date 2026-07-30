@@ -34,3 +34,15 @@ tags = ["Hugo", "博客搭建", "学习记录"]
 - 项目实践经验
 
 希望通过持续学习，不断提升自己的技术能力。
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello, World!\n");
+
+    return 0;
+}
+```
+
