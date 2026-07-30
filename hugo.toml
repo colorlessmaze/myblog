@@ -1,4 +1,4 @@
-baseURL = 'http://localhost:1313/'
+baseURL = 'https://myblog-6vy.pages.dev/'
 locale = 'zh-cn'
 title = 'colorless的个人博客'
 
