@@ -1,5 +1,63 @@
 baseURL = 'https://myblog-6vy.pages.dev/'
 locale = 'zh-cn'
-title = 'colorless的个人博客'
+title = 'colorless'
 
 theme = "PaperMod"
+
+
+[params]
+  env = "production"
+  author = "colorless"
+
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowToc = true
+
+  defaultTheme = "auto"
+
+
+
+[params.homeInfoParams]
+  Title = "Hi, I'm colorless"
+  Content = "网文和二进制爱好者"
+
+
+[menu]
+
+[[menu.main]]
+name = "搜索"
+url = "/search/"
+weight = 1
+
+[[menu.main]]
+name = "文章"
+url = "/posts/"
+weight = 2
+
+[[menu.main]]
+name = "分类"
+url = "/categories/"
+weight = 3
+
+[[menu.main]]
+name = "标签"
+url = "/tags/"
+weight = 4
+
+[[menu.main]]
+name = "关于"
+url = "/about/"
+weight = 5
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/colorlessmaze"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
