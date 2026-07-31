@@ -1,0 +1,117 @@
+:root {
+  --primary-hue: 218deg;
+  --primary-saturation: 82%;
+  --primary-lightness: 58%;
+}
+
+.colorless-welcome {
+  position: relative;
+  display: grid !important;
+  min-height: calc(100vh - var(--hextra-navbar-height) - 7rem);
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 2rem;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgb(96 165 250 / 20%),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgb(167 139 250 / 18%),
+      transparent 34%
+    );
+}
+
+.colorless-welcome::before,
+.colorless-welcome::after {
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgb(148 163 184 / 14%);
+  border-radius: 9999px;
+  content: "";
+  pointer-events: none;
+}
+
+.colorless-welcome::before {
+  width: min(70vw, 54rem);
+  height: min(70vw, 54rem);
+}
+
+.colorless-welcome::after {
+  width: min(46vw, 34rem);
+  height: min(46vw, 34rem);
+}
+
+.colorless-welcome > div {
+  width: 100%;
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.colorless-welcome h1 {
+  margin: 0;
+  font-size: clamp(2.8rem, 8vw, 6.5rem);
+  font-weight: 760;
+  letter-spacing: -0.06em;
+  line-height: 1.05;
+  text-wrap: balance;
+  background-image: linear-gradient(
+    120deg,
+    rgb(15 23 42),
+    rgb(59 130 246) 55%,
+    rgb(124 58 237)
+  );
+}
+
+.colorless-welcome p {
+  margin: 1.8rem auto 0;
+  color: rgb(100 116 139);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  letter-spacing: 0.04em;
+}
+
+html.dark .colorless-welcome {
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgb(37 99 235 / 18%),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgb(124 58 237 / 16%),
+      transparent 34%
+    );
+}
+
+html.dark .colorless-welcome h1 {
+  background-image: linear-gradient(
+    120deg,
+    rgb(248 250 252),
+    rgb(147 197 253) 55%,
+    rgb(196 181 253)
+  );
+}
+
+html.dark .colorless-welcome p {
+  color: rgb(148 163 184);
+}
+
+html.dark .colorless-welcome::before,
+html.dark .colorless-welcome::after {
+  border-color: rgb(148 163 184 / 9%);
+}
+
+@media (max-width: 640px) {
+  .colorless-welcome {
+    min-height: calc(100svh - var(--hextra-navbar-height) - 5rem);
+    border-radius: 1.25rem;
+  }
+
+  .colorless-welcome > div {
+    padding-inline: 0.5rem;
+  }
+}
